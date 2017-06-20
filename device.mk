@@ -22,3 +22,9 @@
 # bitrot and build breakages. Building a component unconditionally does
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
+
+# Graphics
+PRODUCT_PACKAGES += \
+	libGLES_android \
+	libion
+
