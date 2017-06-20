@@ -62,6 +62,9 @@ ENABLE_CPUSETS := true
 # Display
 TARGET_USE_PAN_DISPLAY := true
 
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 
