@@ -51,6 +51,9 @@ PRODUCT_PACKAGES += \
     	make_ext4fs \
 	setup_fs
 
+# GPS
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     	ro.opengles.version=131072 \

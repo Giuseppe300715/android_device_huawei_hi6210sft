@@ -45,6 +45,7 @@ TARGET_BOARD_PLATFORM := hi6210sft
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RPC := true
 
 # Camera
 USE_CAMERA_STUB := true
@@ -54,6 +55,9 @@ ENABLE_CPUSETS := true
 
 # Display
 TARGET_USE_PAN_DISPLAY := true
+
+# GPS
+USE_DEVICE_SPECIFIC_GPS := true
 
 # Graphics
 ANDROID_ENABLE_RENDERSCRIPT := true
