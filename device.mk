@@ -48,3 +48,10 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
         frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml \
         frameworks/native/data/etc/android.software.backup.xml:system/etc/permissions/android.software.backup.xml \
+
+# Zygote
+PRODUCT_COPY_FILES += \
+	system/core/rootdir/init.zygote64_32.rc:root/init.zygote64_32.rc
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	ro.zygote=zygote64_32
