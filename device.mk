@@ -29,6 +29,11 @@ PRODUCT_RUNTIMES := runtime_libart_default
 # Dalvik
 $(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    	hw.lcd.lcd_density=160 \
+    	ro.sf.lcd_density=160 \
+
 # Graphics
 PRODUCT_PACKAGES += \
 	libGLES_android \
