@@ -39,6 +39,16 @@ PRODUCT_PACKAGES += \
 	libGLES_android \
 	libion
 
+# Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/huawei/hi6210sft-kernel/Image
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    	$(LOCAL_KERNEL):kernel
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS := device/huawei/hi6210sft/overlay
 
