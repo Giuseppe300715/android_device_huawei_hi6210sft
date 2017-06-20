@@ -37,8 +37,8 @@ $(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    	hw.lcd.lcd_density=160 \
-    	ro.sf.lcd_density=160 \
+    	hw.lcd.lcd_density=320 \
+    	ro.sf.lcd_density=320 \
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
