@@ -28,7 +28,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_PACKAGES += \
 	gatekeeperd \
-	gatord
+	gatord \
+	hwclock
 
 # ART
 PRODUCT_RUNTIMES := runtime_libart_default
