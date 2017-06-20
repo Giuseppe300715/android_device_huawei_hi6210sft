@@ -93,6 +93,32 @@ endif
 PRODUCT_COPY_FILES += \
     	$(LOCAL_KERNEL):kernel
 
+# NFC
+PRODUCT_PACKAGES += \
+    	com.android.nfc_extras \
+    	libnfc-nci \
+    	libnfc_nci_jni \
+    	nfc_nci.pn54x.default \
+    	NfcNci \
+    	Tag 
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/etc/libnfc-brcm-alice.conf:system/etc/libnfc-brcm.conf \
+	$(LOCAL_PATH)/rootdir/system/etc/libnfc-nxp-alice.conf:system/etc/libnfc-nxp.conf \
+	$(LOCAL_PATH)/rootdir/system/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/lib64/hw/nfc_nci.pn54x.default.so:system/lib64/hw/nfc_nci.pn54x.default.so
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/system/vendor/firmware/bcm2079x_firmware.ncd:system/vendor/firmware/bcm2079x_firmware.ncd \
+	$(LOCAL_PATH)/rootdir/system/vendor/firmware/bcm2079x_pre_firmware.ncd:system/vendor/firmware/bcm2079x_pre_firmware.ncd \
+
+PRODUCT_COPY_FILES += \
+    	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    	frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+    	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS := device/huawei/hi6210sft/overlay
 

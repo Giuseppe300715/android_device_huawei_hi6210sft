@@ -15,4 +15,7 @@
 /dev/akm09911_dev         0660   system      system
 /dev/miscnff              0770   root        system
 
+# NFC
+/dev/pn544                0660    nfc         nfc
+
 
