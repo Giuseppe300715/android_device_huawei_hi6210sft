@@ -43,6 +43,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 # Board
 TARGET_BOARD_PLATFORM := hi6210sft
 
+# Camera
+USE_CAMERA_STUB := true
+
 # Graphics
 ANDROID_ENABLE_RENDERSCRIPT := true
 TARGET_HARDWARE_3D := true
