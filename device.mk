@@ -42,6 +42,9 @@ $(call inherit-product-if-exists, vendor/huawei/hi6210sft/hi6210sft-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Display
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
 PRODUCT_PROPERTY_OVERRIDES += \
     	hw.lcd.lcd_density=320 \
     	ro.sf.lcd_density=320 \
