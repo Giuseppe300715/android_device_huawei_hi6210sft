@@ -26,6 +26,9 @@
 # ART
 PRODUCT_RUNTIMES := runtime_libart_default
 
+# Dalvik
+$(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+
 # Graphics
 PRODUCT_PACKAGES += \
 	libGLES_android \
