@@ -1,0 +1,43 @@
+on init
+
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+    write /sys/kernel/mm/transparent_hugepage/enabled "never"
+
+    write /proc/sys/kernel/randomize_va_space 0
+
+on fs
+
+    mount_all /fstab.hi6210sft
+    setprop ro.crypto.fuse_sdcard false
+
+on post-fs-data
+
+    mkdir /data/media 0770 media_rw media_rw
+    mkdir /data/misc/gatord 0700 root root
+
+    restorecon_recursive /data/local/tmp/lava
+
+on post-fs
+
+    symlink /sdcard /storage/sdcard0
+
+    write /sys/devices/leds/leds/bt_active/trigger "hci1rx"
+
+    chmod 0666 /dev/ump
+    chmod 0666 /dev/ion
+    chmod 0666 /dev/graphics/fb0
+
+    write /dev/cpuset/foreground/cpus 0-7
+
+    write /dev/cpuset/foreground/boost/cpus 0-7
+
+    write /dev/cpuset/background/cpus 0
+
+    write /dev/cpuset/system-background/cpus 0-4
+
+on property:usb_speed.switch=high
+    write /sys/kernel/debug/f72c0000.usb/config "0"
+
+on property:usb_speed.switch=full
+    write /sys/kernel/debug/f72c0000.usb/config "1"
