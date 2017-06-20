@@ -79,6 +79,10 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     	ro.opengles.version=131072 \
 
+# Huawei P8 Lite Components
+PRODUCT_PACKAGES += \
+	sound_trigger.primary.hi6210sft \
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/huawei/hi6210sft-kernel/Image
