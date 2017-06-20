@@ -46,6 +46,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	hw.lcd.lcd_density=320 \
     	ro.sf.lcd_density=320 \
 
+# Graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+    	ro.opengles.version=131072 \
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/huawei/hi6210sft-kernel/Image
