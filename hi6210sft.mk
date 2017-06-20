@@ -22,3 +22,13 @@
 # bitrot and build breakages. Building a component unconditionally does
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
+
+# Android Open Source Project Common Stuff
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
+
+# Device
+$(call inherit-product, device/huawei/hi6210sft/device.mk)
+
+PRODUCT_NAME := hi6210sft
+PRODUCT_DEVICE := hi6210sft

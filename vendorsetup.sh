@@ -22,3 +22,6 @@
 # bitrot and build breakages. Building a component unconditionally does
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
+
+add_lunch_combo hi6210sft-userdebug
+

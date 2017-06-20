@@ -22,3 +22,6 @@
 # bitrot and build breakages. Building a component unconditionally does
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
+
+PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/hi6210sft.mk
