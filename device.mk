@@ -39,6 +39,20 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # ART
 PRODUCT_RUNTIMES := runtime_libart_default
 
+# Audio
+PRODUCT_PACKAGES += \
+     	audio.a2dp.default \
+     	audio_policy.stub \
+     	audio.primary.default \
+     	audio.r_submix.default \
+     	audio.usb.default \
+     	libaudioutils \
+     	libtinyalsa \
+     	tinycap \
+     	tinymix \
+     	tinypcminfo \
+     	tinyplay \
+
 # Blobs
 $(call inherit-product-if-exists, vendor/huawei/hi6210sft/hi6210sft-vendor.mk)
 
