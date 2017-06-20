@@ -26,6 +26,9 @@
 # ART
 PRODUCT_RUNTIMES := runtime_libart_default
 
+# Blobs
+$(call inherit-product-if-exists, vendor/huawei/hi6210sft/hi6210sft-vendor.mk)
+
 # Dalvik
 $(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
@@ -33,11 +36,6 @@ $(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048
 PRODUCT_PROPERTY_OVERRIDES += \
     	hw.lcd.lcd_density=160 \
     	ro.sf.lcd_density=160 \
-
-# Graphics
-PRODUCT_PACKAGES += \
-	libGLES_android \
-	libion
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
