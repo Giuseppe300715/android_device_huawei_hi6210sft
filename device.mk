@@ -23,6 +23,9 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
+# ART
+PRODUCT_RUNTIMES := runtime_libart_default
+
 # Graphics
 PRODUCT_PACKAGES += \
 	libGLES_android \
