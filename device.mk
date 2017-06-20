@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += \
 	libGLES_android \
 	libion
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS := device/huawei/hi6210sft/overlay
+
 # Permissions
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.screen.xml:root/system/etc/permissions/android.hardware.screen.xml \
