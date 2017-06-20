@@ -130,12 +130,23 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/rootdir/fstab.hi6210sft:root/fstab.hi6210sft \
+        $(LOCAL_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc \
         $(LOCAL_PATH)/rootdir/init.hi6210sft.rc:root/init.hi6210sft.rc \
         $(LOCAL_PATH)/rootdir/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc \
 
-# Wifi
+# USB
 PRODUCT_PACKAGES += \
 	com.android.future.usb.accessory
+
+# Wifi
+PRODUCT_PACKAGES += \
+	hostapd \
+	libwpa_client \
+	wpa_supplicant
+ 
+PRODUCT_PROPERTY_OVERRIDES += \
+	wifi.interface=wlan0 \
+        wifi.supplicant_scan_interval=15
 
 # Zygote
 ADDITIONAL_DEFAULT_PROPERTIES += \
