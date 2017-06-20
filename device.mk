@@ -39,7 +39,7 @@ PRODUCT_RUNTIMES := runtime_libart_default
 $(call inherit-product-if-exists, vendor/huawei/hi6210sft/hi6210sft-vendor.mk)
 
 # Dalvik
-$(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
