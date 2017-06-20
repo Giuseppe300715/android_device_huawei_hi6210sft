@@ -105,6 +105,10 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/rootdir/init.hi6210sft.rc:root/init.hi6210sft.rc \
         $(LOCAL_PATH)/rootdir/ueventd.hi6210sft.rc:root/ueventd.hi6210sft.rc \
 
+# Wifi
+PRODUCT_PACKAGES += \
+	com.android.future.usb.accessory
+
 # Zygote
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.zygote=zygote64_32
